@@ -29,7 +29,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-image: url(/img/mountain-6815304_1920.jpg);
+    background-image: url(../img/mountain-6815304_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -124,10 +124,12 @@ body {
                 }
             }
 
-            .color-modes{
+            .color-modes {
+
                 .light,
                 .dark {
                     font-size: 24px;
+
                     &:hover {
                         transform: scale(1.1);
                     }
@@ -337,7 +339,7 @@ body {
     }
 }
 
-.copy-text{
+.copy-text {
     position: absolute;
     bottom: 0;
     width: 100%;
