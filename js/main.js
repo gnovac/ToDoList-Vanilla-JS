@@ -124,17 +124,6 @@ const taskContent = () => {
     toolsArea.append(editBtn, deleteBtn);
 }
 
-// const checkClick = e => {
-//     if (e.target.closest('.complete')) {
-//         e.target.closest('li').classList.toggle('completed');
-//         e.target.closest('i').classList.toggle('fa-check-circle');
-//         e.target.closest('i').classList.toggle('fa-circle');
-//     } else if (e.target.closest('.edit')) {
-//         editTask(e);
-//     } else if (e.target.closest('.delete')) {
-//         deleteTask(e);
-//     }
-// }
 const checkClick = e => {
     if (e.target.closest('.fa-circle')) {
         e.target.closest('li').classList.add('completed');
