@@ -124,11 +124,30 @@ const taskContent = () => {
     toolsArea.append(editBtn, deleteBtn);
 }
 
+// const checkClick = e => {
+//     if (e.target.closest('.complete')) {
+//         e.target.closest('li').classList.toggle('completed');
+//         e.target.closest('i').classList.toggle('fa-check-circle');
+//         e.target.closest('i').classList.toggle('fa-circle');
+//     } else if (e.target.closest('.edit')) {
+//         editTask(e);
+//     } else if (e.target.closest('.delete')) {
+//         deleteTask(e);
+//     }
+// }
 const checkClick = e => {
-    if (e.target.closest('.complete')) {
-        e.target.closest('li').classList.toggle('completed');
-        e.target.closest('i').classList.toggle('fa-check-circle');
-        e.target.closest('i').classList.toggle('fa-circle');
+    if (e.target.closest('.fa-circle')) {
+        e.target.closest('li').classList.add('completed');
+        e.target.closest('i').classList.add('fa-check-circle');
+        e.target.closest('i').classList.remove('fa-circle');
+        $idNumber--;
+        taskLeft();
+    } else if (e.target.closest('.fa-check-circle')) {
+        e.target.closest('li').classList.remove('completed');
+        e.target.closest('i').classList.remove('fa-check-circle');
+        e.target.closest('i').classList.add('fa-circle');
+        $idNumber++;
+        taskLeft();
     } else if (e.target.closest('.edit')) {
         editTask(e);
     } else if (e.target.closest('.delete')) {
@@ -158,7 +177,9 @@ const changeTask = () => {
 }
 
 const deleteTask = e => {
-    if (e.target.closest('.delete')) {
+    if (e.target.closest('.delete') && (e.target.closest('li').classList.contains('completed'))) {
+        e.target.closest('li').remove();
+    } else {
         e.target.closest('li').remove();
         $idNumber--;
         taskLeft();
@@ -177,7 +198,7 @@ const deleteAllTasks = () => {
 }
 
 const taskLeft = () => {
-    $taskCounter.textContent = `Liczba zadań na liście: ${$idNumber}`;
+    $taskCounter.textContent = `Do wykonania pozostało: ${$idNumber}`;
 }
 
 const filterTasks = e => {
