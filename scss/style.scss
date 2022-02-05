@@ -11,6 +11,10 @@
 
 @import '_colors.scss';
 
+html {
+    font-size: 62.5%;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -23,6 +27,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: $whiteColor;
     color: $pureBlack;
+    font-size: 1.6rem;
 }
 
 .hero-img {
@@ -46,7 +51,7 @@ body {
 
 
 .todo-container {
-    width: 800px;
+    width: 100%;
     margin-top: 280px;
     border-radius: 8px;
     background-color: $pureWhite;
@@ -56,12 +61,12 @@ body {
 
     .title-app {
         position: absolute;
-        top: 40px;
+        top: 20px;
         text-transform: uppercase;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 50px;
+        font-size: 5rem;
         color: $pureWhite;
 
         p {
@@ -72,7 +77,7 @@ body {
     .header {
         position: absolute;
         top: 160px;
-        width: 800px;
+        width: 100%;
         padding: 10px;
         background-color: $pureWhite;
         border-radius: 8px;
@@ -80,18 +85,20 @@ body {
 
         .current-date {
             text-align: left;
-            font-size: 14px;
+            font-size: 1.4rem;
             font-weight: bold;
         }
 
         h2 {
-            font-size: 30px;
+            font-size: 2.3rem;
             text-transform: uppercase;
             margin-bottom: 20px;
         }
     }
 
     .todo-list {
+        padding: 5px;
+
         .settings-box {
             display: flex;
             justify-content: space-evenly;
@@ -99,7 +106,7 @@ body {
             margin: 10px 0;
 
             .tasks-counter {
-                font-size: 14px;
+                font-size: 1.2rem;
             }
 
             button {
@@ -112,23 +119,29 @@ body {
                 color: $pureBlack;
             }
 
+
             .filter {
+                font-size: 1.5rem;
+
                 &:hover {
                     color: $blueColor;
                 }
             }
 
             .clear-all {
+                font-size: 1.5rem;
+
                 &:hover {
                     color: $redColor;
                 }
             }
 
             .color-modes {
+                display: flex;
 
                 .light,
                 .dark {
-                    font-size: 24px;
+                    font-size: 2.5rem;
 
                     &:hover {
                         transform: scale(1.1);
@@ -139,12 +152,13 @@ body {
         }
 
         h3 {
-            font-size: 24px;
-            margin-bottom: 16px;
+            font-size: 2.5rem;
+            margin: 30px 0 10px 0;
         }
 
         .error-info {
             margin: 20px 0;
+            font-size: 1.3rem;
         }
 
         li {
@@ -162,7 +176,7 @@ body {
             button {
                 margin: 10px 10px;
                 border: none;
-                font-size: 24px;
+                font-size: 2.5rem;
                 background-color: transparent;
                 cursor: pointer;
             }
@@ -179,11 +193,11 @@ body {
             p {
                 width: 80%;
                 text-align: left;
-                font-style: 12px;
+                word-break: break-all;
             }
 
             .tools {
-                display: inline-block;
+                display: flex;
                 font-size: 0;
 
                 button {
@@ -192,7 +206,7 @@ body {
 
                 .edit {
                     color: $blueColor;
-                    font-size: 18px;
+                    font-size: 2rem;
 
                     &:hover {
                         color: #148091;
@@ -201,7 +215,7 @@ body {
 
                 .delete {
                     color: $redColor;
-                    font-size: 18px;
+                    font-size: 2rem;
 
                     &:hover {
                         color: #a72935;
@@ -218,7 +232,7 @@ body {
     .completed {
         font-style: italic;
         text-decoration: line-through;
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 
     .input-container {
@@ -230,11 +244,10 @@ body {
 
         .todo-input {
             width: 80%;
-            padding: 10px 20px;
             margin: 10px 0;
             border-radius: 5px;
             border: none;
-            font-size: 18px;
+            font-size: 1.8rem;
             background-color: $pureWhite;
             color: $pureBlack;
 
@@ -244,7 +257,7 @@ body {
         }
 
         .add-btn {
-            font-size: 20px;
+            font-size: 2rem;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -272,7 +285,7 @@ body {
     position: fixed;
     bottom: 25px;
     left: 50%;
-    width: 600px;
+    width: 100%;
     transform: translateX(-50%);
     color: #fafafa;
     background-color: #4f525c;
@@ -305,8 +318,9 @@ body {
         }
 
         .popup-btn {
+            display: flex;
+            justify-content: center;
             width: 30%;
-            display: inline-block;
             padding: 10px 22px;
             margin: 20px;
             border: none;
@@ -335,7 +349,6 @@ body {
                 color: #fff;
             }
         }
-
     }
 }
 
@@ -347,4 +360,78 @@ body {
     text-align: center;
     color: $pureBlack;
     background-color: $pureWhite;
+}
+
+@media(min-width: 576px) {
+    html {
+        font-size: 70%;
+    }
+
+    .todo-container {
+
+        .header{
+            h2{
+                font-size: 2.4rem;
+            }
+        }
+
+        .filter-box {
+            display: flex;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .todo-container {
+        width: 80%;
+
+        .header {
+            width: 80%;
+        }
+    }
+
+    .popup {
+        width: 60%;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .todo-container {
+        width: 70%;
+
+        .header {
+            width: 70%;
+        }
+    }
+
+    .popup {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html{
+        font-size: 75%;
+    }
+
+    .todo-container {
+        width: 50%;
+
+        .header {
+            width: 50%;
+
+            h2{
+                font-size: 3rem;
+            }
+        }
+
+        .todo-input{
+            padding: 0 20px;
+        }
+    }
+
+    .popup {
+        width: 40%;
+    }
 }

@@ -9,6 +9,10 @@
   --border-color: #eee;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -26,6 +30,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--white-color);
   color: var(--pure-black-color);
+  font-size: 1.6rem;
 }
 
 .hero-img {
@@ -48,7 +53,7 @@ body {
 }
 
 .todo-container {
-  width: 800px;
+  width: 100%;
   margin-top: 280px;
   border-radius: 8px;
   background-color: var(--pure-white-color);
@@ -60,7 +65,7 @@ body {
 
 .todo-container .title-app {
   position: absolute;
-  top: 40px;
+  top: 20px;
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,7 +76,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 50px;
+  font-size: 5rem;
   color: var(--pure-white-color);
 }
 
@@ -82,7 +87,7 @@ body {
 .todo-container .header {
   position: absolute;
   top: 160px;
-  width: 800px;
+  width: 100%;
   padding: 10px;
   background-color: var(--pure-white-color);
   border-radius: 8px;
@@ -92,14 +97,18 @@ body {
 
 .todo-container .header .current-date {
   text-align: left;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 .todo-container .header h2 {
-  font-size: 30px;
+  font-size: 2.3rem;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.todo-container .todo-list {
+  padding: 5px;
 }
 
 .todo-container .todo-list .settings-box {
@@ -116,7 +125,7 @@ body {
 }
 
 .todo-container .todo-list .settings-box .tasks-counter {
-  font-size: 14px;
+  font-size: 1.2rem;
 }
 
 .todo-container .todo-list .settings-box button {
@@ -132,17 +141,31 @@ body {
   color: var(--pure-black-color);
 }
 
+.todo-container .todo-list .settings-box .filter {
+  font-size: 1.5rem;
+}
+
 .todo-container .todo-list .settings-box .filter:hover {
   color: var(--blue-color);
+}
+
+.todo-container .todo-list .settings-box .clear-all {
+  font-size: 1.5rem;
 }
 
 .todo-container .todo-list .settings-box .clear-all:hover {
   color: var(--red-color);
 }
 
+.todo-container .todo-list .settings-box .color-modes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .todo-container .todo-list .settings-box .color-modes .light,
 .todo-container .todo-list .settings-box .color-modes .dark {
-  font-size: 24px;
+  font-size: 2.5rem;
 }
 
 .todo-container .todo-list .settings-box .color-modes .light:hover,
@@ -152,12 +175,13 @@ body {
 }
 
 .todo-container .todo-list h3 {
-  font-size: 24px;
-  margin-bottom: 16px;
+  font-size: 2.5rem;
+  margin: 30px 0 10px 0;
 }
 
 .todo-container .todo-list .error-info {
   margin: 20px 0;
+  font-size: 1.3rem;
 }
 
 .todo-container .todo-list li {
@@ -181,7 +205,7 @@ body {
 .todo-container .todo-list li button {
   margin: 10px 10px;
   border: none;
-  font-size: 24px;
+  font-size: 2.5rem;
   background-color: transparent;
   cursor: pointer;
 }
@@ -199,11 +223,13 @@ body {
 .todo-container .todo-list li p {
   width: 80%;
   text-align: left;
-  font-style: 12px;
+  word-break: break-all;
 }
 
 .todo-container .todo-list li .tools {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 0;
 }
 
@@ -214,7 +240,7 @@ body {
 
 .todo-container .todo-list li .tools .edit {
   color: var(--blue-color);
-  font-size: 18px;
+  font-size: 2rem;
 }
 
 .todo-container .todo-list li .tools .edit:hover {
@@ -223,7 +249,7 @@ body {
 
 .todo-container .todo-list li .tools .delete {
   color: var(--red-color);
-  font-size: 18px;
+  font-size: 2rem;
 }
 
 .todo-container .todo-list li .tools .delete:hover {
@@ -237,7 +263,7 @@ body {
 .todo-container .completed {
   font-style: italic;
   text-decoration: line-through;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 .todo-container .input-container {
@@ -256,11 +282,10 @@ body {
 
 .todo-container .input-container .todo-input {
   width: 80%;
-  padding: 10px 20px;
   margin: 10px 0;
   border-radius: 5px;
   border: none;
-  font-size: 18px;
+  font-size: 1.8rem;
   background-color: var(--pure-white-color);
   color: var(--pure-black-color);
 }
@@ -270,7 +295,7 @@ body {
 }
 
 .todo-container .input-container .add-btn {
-  font-size: 20px;
+  font-size: 2rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -307,7 +332,7 @@ body {
   position: fixed;
   bottom: 25px;
   left: 50%;
-  width: 600px;
+  width: 100%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: #fafafa;
@@ -348,8 +373,13 @@ body {
 }
 
 .popup .popup-body .popup-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 30%;
-  display: inline-block;
   padding: 10px 22px;
   margin: 20px;
   border: none;
@@ -388,5 +418,64 @@ body {
   text-align: center;
   color: var(--pure-black-color);
   background-color: var(--pure-white-color);
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 70%;
+  }
+  .todo-container .header h2 {
+    font-size: 2.4rem;
+  }
+  .todo-container .filter-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .todo-container {
+    width: 80%;
+  }
+  .todo-container .header {
+    width: 80%;
+  }
+  .popup {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .todo-container {
+    width: 70%;
+  }
+  .todo-container .header {
+    width: 70%;
+  }
+  .popup {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 75%;
+  }
+  .todo-container {
+    width: 50%;
+  }
+  .todo-container .header {
+    width: 50%;
+  }
+  .todo-container .header h2 {
+    font-size: 3rem;
+  }
+  .todo-container .todo-input {
+    padding: 0 20px;
+  }
+  .popup {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
