@@ -187,7 +187,7 @@ const deleteAllTasks = () => {
 }
 
 const taskLeft = () => {
-    $taskCounter.textContent = `Do wykonania pozostało: ${$idNumber}`;
+    $taskCounter.textContent = `Pozostało: ${$idNumber}`;
 }
 
 const filterTasks = e => {

@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDoList</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/907ccae0c7.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/907ccae0c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="hero-img">
-        <div class="shadow-img"></div>
+      <div class="shadow-img"></div>
     </div>
 
-
     <div class="todo-container">
-        <div class="title-app">
-            <h1><i class="far fa-check-square"></i></h1>
-            <p class="title-text">todos</p>
+      <div class="title-app">
+        <h1><i class="far fa-check-square"></i></h1>
+        <p class="title-text">todos</p>
+      </div>
+      <div class="header">
+        <div class="current-date"></div>
+        <h2></h2>
+      </div>
+      <div class="todo-list">
+        <div class="settings-box">
+          <p class="tasks-counter">Pozostało: 0</p>
+          <div class="filter-box">
+            <button class="filter" data-filter="all">Wszystkie</button>
+            <button class="filter" data-filter="active">Aktywne</button>
+            <button class="filter" data-filter="completed">Zakończone</button>
+          </div>
+          <button class="clear-all">Usuń wszystkie</button>
+          <div class="color-modes">
+            <button class="light"><i class="fas fa-sun"></i></button>
+            <button class="dark"><i class="fas fa-moon"></i></button>
+          </div>
         </div>
-        <div class="header">
-            <div class="current-date"></div>
-            <h2></h2>
-        </div>
-        <div class="todo-list">
-            <div class="settings-box">
-                <p class="tasks-counter">Do wykonania pozostało: 0</p>
-                <div class="filter-box">
-                    <button class="filter" data-filter="all">Wszystkie</button>
-                    <button class="filter" data-filter="active">Aktywne</button>
-                    <button class="filter" data-filter="completed">Zakończone</button>
-                </div>
-                <button class="clear-all">Usuń wszystkie</button>
-                <div class="color-modes">
-                    <button class="light"><i class="fas fa-sun"></i></button>
-                    <button class="dark"><i class="fas fa-moon"></i></button>
-                </div>
-
-
-            </div>
-            <h3>Lista zadań:</h3>
-            <p class="error-info">Chyba odpoczywasz, nie ma dodanych żadnych zadań!</p>
-            <ul>
-                <!-- <li id='todo-1'>
+        <h3>Lista zadań:</h3>
+        <p class="error-info">
+          Chyba odpoczywasz, nie ma dodanych żadnych zadań!
+        </p>
+        <ul>
+          <!-- <li id='todo-1'>
                     <button class="complete"><i class="far fa-circle"></i></button>
                     <p class="text">test1</p>
                     <div class="tools">
@@ -71,25 +75,32 @@
                         <button class="delete"><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </li> -->
-            </ul>
-            <div class="input-container">
-                <input type="text" class="todo-input" placeholder="Co chcesz dzisiaj robić?">
-                <button class="add-btn"><i class="fas fa-plus"></i></button>
-            </div>
+        </ul>
+        <div class="input-container">
+          <input
+            type="text"
+            class="todo-input"
+            placeholder="Co chcesz dzisiaj robić?"
+          />
+          <button class="add-btn"><i class="fas fa-plus"></i></button>
         </div>
+      </div>
     </div>
 
     <div class="popup">
-        <h3>Edytuj zadanie:</h3>
-        <div class="popup-body">
-            <p class="popup-info"></p>
-            <input type="text" class="popup-input" placeholder="Wprowadź nową treść zadania...">
-            <button class="popup-btn accept">Zatwierdź</button>
-            <button class="popup-btn cancel">Anuluj</button>
-        </div>
+      <h3>Edytuj zadanie:</h3>
+      <div class="popup-body">
+        <p class="popup-info"></p>
+        <input
+          type="text"
+          class="popup-input"
+          placeholder="Wprowadź nową treść zadania..."
+        />
+        <button class="popup-btn accept">Zatwierdź</button>
+        <button class="popup-btn cancel">Anuluj</button>
+      </div>
     </div>
-     <p class="copy-text">&copy; 2022 gnovac</p>
+    <p class="copy-text">&copy; 2022 gnovac</p>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
